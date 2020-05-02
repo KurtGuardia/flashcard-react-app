@@ -1,0 +1,115 @@
+body {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 1rem 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    padding: 2rem 3rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+
+.form-group > label {
+    color: rgb(83, 82, 82);
+    font-size: .75rem;
+    margin-bottom: .25rem;
+}
+.form-group > input {
+    color: #000;
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    text-align: center;
+}
+.form-group > select{
+    color: #000;
+    font-size: 1rem;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);    text-align: center;
+}
+
+.btn {
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);    color: white;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, #9ec99e 0%, #a1cca1 0%, #a642d4 0%, #d352ca 93%, #ee3e87 96%, #e93b84 100%);}
+
+.card-grid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  /* background-color: white; */
+  transform-style: preserve-3d;
+  transition: .5s;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+}
+
+.card:hover {
+    --translate-y: -15px;
+    box-shadow: 0 0 10px 12px rgba(0, 0, 0, .6);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front {
+    left: 0;
+    background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+  color: white;
+}
+
+.flashcard-options {
+    margin-top: .5rem;
+}
+
+.flashcard-option {
+    margin-top: .5rem;
+    color: #555;
+    font-size: .75rem;
+}
+
+.flashcard-option:first-child{
+    margin-top: 0;
+}
